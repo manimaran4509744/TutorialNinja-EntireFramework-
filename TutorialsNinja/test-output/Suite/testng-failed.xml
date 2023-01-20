@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="org.utilities.ListenerClass"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <parameter name="browser" value="Edge"/>
+    <classes>
+      <class name="org.testCases.EndToEndTest">
+        <methods>
+          <include name="assertthrow"/>
+          <include name="validateEndToEnd"/>
+          <include name="loadReport"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- org.testCases.EndToEndTest -->
+      <class name="org.testCases.loginTest">
+        <methods>
+          <include name="assertthrow"/>
+          <include name="loadReport"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="validateLogin" invocation-numbers="1 2 3"/>
+        </methods>
+      </class> <!-- org.testCases.loginTest -->
+      <class name="org.testCases.RegisterTest">
+        <methods>
+          <include name="assertthrow"/>
+          <include name="loadReport"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="validateRegister"/>
+        </methods>
+      </class> <!-- org.testCases.RegisterTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

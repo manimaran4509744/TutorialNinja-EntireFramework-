@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="RegressionTesting">
+	<test name="TestCase1">
+		<parameter name="browser" value="Edge"></parameter>
+		<groups>
+			<run>
+				<include name="Regression">
+				</include>
+			</run>
+		</groups>
+
+		<classes>
+			<class name="org.testCases.RegisterTest" />
+			<class name="org.testCases.loginTest" />
+			<class name="org.testCases.ShoppingCartTest" />
+			<class name="org.testCases.EndToEndTest" />
+			<class name="org.testCases.AddToCartTest" />
+			<class name="org.testCases.HomePageTest" />
+			<class name="org.testCases.ForgotPasswordTest" />
+			<class name="org.testCases.SearchTest" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
